@@ -1,0 +1,6 @@
+<launch>
+    <arg name="robot_model" default="$(find sirius_sim)/urdf/leo_erc_sim.urdf.xacro"/>
+    <include file="$(find leo_erc_gazebo)/launch/leo_marsyard2022.launch" pass_all_args="true"/>
+    <include file="$(find leo_erc_viz)/launch/rviz.launch"/>
+    <node name="sirius_key_teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" args="speed:=0.4 turn:=1.0 repeat_rate:=10.0 key_timeout:=0.3"/>
+</launch>
