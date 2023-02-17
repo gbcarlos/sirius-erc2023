@@ -1,0 +1,6 @@
+<launch>
+ <!--<arg name="world" default="$(find-pkg-share erc_sim)/worlds/marsyard2022.world"/>-->
+ <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+  <!--<arg name="world" value="cafe.world"/> value="$(var world)"/>-->
+ </include>
+</launch>
